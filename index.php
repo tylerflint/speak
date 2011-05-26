@@ -56,7 +56,6 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
           <input class="btn" type="image" value="" src="images/btn.png" border="0" name="btn">
           <div class="message-box">
             <?          
-            $count  = 0;
             $cssClass  = array("yellow", "orange");
             $result = mysql_query("SELECT * FROM `Message`", $con);
             $valAr = array();
@@ -71,16 +70,11 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
             $valAr = array_reverse( $valAr );
             $len = count($valAr);
             for ($i = 0; $i < $len; $i++) { 
-              echo  "<div class='message " . $cssClass[$count] . "'>";
+              echo  "<div class='message " . $cssClass[$i % count($cssClass)] . "'>";
               echo  "  <span class='top'></span>";
               echo  $valAr[$i];
               echo  "  <span class='bottom'></span>";
               echo  "</div>";
-
-              $count++;
-              if ($count == (count($cssClass))){
-                $count = 0;
-              }
             }
 
             mysql_close($con);
