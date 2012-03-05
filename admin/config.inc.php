@@ -31,7 +31,7 @@ $cfg['Servers'][$i]['auth_type'] = 'config';
 $cfg['Servers'][$i]['host'] = $_SERVER['DB1_HOST'];
 $cfg['Servers'][$i]['host'] = $_SERVER['DB1_PORT'];
 $cfg['Servers'][$i]['user'] = $_SERVER['DB1_USER'];
-$cfg['Servers'][$i]['pass'] = $_SERVER['DB1_PASS'];
+$cfg['Servers'][$i]['password'] = $_SERVER['DB1_PASS'];
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = false;
 /* Select mysql if your server does not have mysqli */
