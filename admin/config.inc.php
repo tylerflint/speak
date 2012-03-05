@@ -26,10 +26,12 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['auth_type'] = 'config';
 /* Server parameters */
 $cfg['Servers'][$i]['host'] = $_SERVER['DB1_HOST'];
 $cfg['Servers'][$i]['host'] = $_SERVER['DB1_PORT'];
+$cfg['Servers'][$i]['user'] = $_SERVER['DB1_USER'];
+$cfg['Servers'][$i]['pass'] = $_SERVER['DB1_PASS'];
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = false;
 /* Select mysql if your server does not have mysqli */
@@ -41,8 +43,8 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
  */
 
 /* User used to manipulate with storage */
-$cfg['Servers'][$i]['controluser'] = $_SERVER['DB1_USER'];
-$cfg['Servers'][$i]['controlpass'] = $_SERVER['DB1_PASS'];
+// $cfg['Servers'][$i]['controluser'] = $_SERVER['DB1_USER'];
+// $cfg['Servers'][$i]['controlpass'] = $_SERVER['DB1_PASS'];
 
 /* Storage database and tables */
 // $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
