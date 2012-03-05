@@ -1,5 +1,10 @@
 web1:
   name: speakapp
+  php_extensions: 
+    - mcrypt
+    - mysqli
+    - mysql
+    - mbstring 
   
 db1:
   name: speakdb
